@@ -1,0 +1,28 @@
+---
+title: "GitHub Advanced"
+author: "mblackmore28"
+format: html
+execute:
+  echo: false
+---
+
+```{r}
+#| label: setup
+#| include: true
+#| message: false
+
+library(tidyverse)
+```
+
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy, color = class)) +
+  geom_point(size = 2.5, alpha = 0.8) +
+  labs(
+    title = "Engine size and highway mileage",
+    subtitle = "Built-in `mpg` data set",
+    x = "Engine displacement (litres)",
+    y = "Highway miles per gallon",
+    color = "Vehicle class"
+  ) +
+  theme_minimal()
+```
